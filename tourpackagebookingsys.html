@@ -1,0 +1,1620 @@
+<!--MIESHARYN CHARRYN YUN ANAK JANNAI 20DIT25F1033 -->
+<!--INTAN NUR NAJWA QUAZREENA BINTI MOHAMAD 20DIT25F1033-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QZYN TOUR AGENCY</title>
+
+<style>
+
+/* =========================
+   ORIGINAL CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: rgb(208,213,219);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    /* ADDED */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00111f;
+}
+
+.logo span {
+    color: #b57a04;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #ffd071;
+}
+
+.booking-btn {
+    background-color: #d69e2e;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+.booking-btn:hover {
+    background-color: #b98216;
+}
+
+/* HERO */
+.hero {
+    height: 570px;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45)),
+    url("image/Kch.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #dec48e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background-color: #b98216;
+    transform: translateY(-2px);
+}
+
+/* BOOKING */
+.booking-container {
+    width: 85%;
+    max-width: 1100px;
+    margin: -45px auto 50px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,.15);
+
+    position: relative;
+    z-index: 5;
+}
+
+.booking-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #123b5d;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d69e2e;
+}
+
+.search-btn {
+    background-color: #123b5d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.search-btn:hover {
+    background-color: #0b2b44;
+}
+
+/* ADDED ERROR MESSAGE */
+.error-message {
+    color: #d93025;
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 15px;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.about h2 {
+    color: #123b5d;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* PACKAGES */
+.packages {
+    padding: 60px 7%;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #123b5d;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #777;
+}
+
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.package-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+
+    transition: .3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+
+.package-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.package-info {
+    padding: 20px;
+}
+
+.package-info h3 {
+    color: #123b5d;
+    margin-bottom: 10px;
+}
+
+.package-info p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #d69e2e;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.details-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+
+    background-color: #123b5d;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+.details-btn:hover {
+    background-color: #0b2b44;
+}
+
+/* WHY US */
+.why-us {
+    padding: 60px 7%;
+    background-color: #f5f7fa;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.why-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.why-card .icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #123b5d;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   CONTACT US
+================================================== */
+
+.contact-section {
+    padding: 70px 7%;
+    background-color: white;
+}
+
+.contact-container {
+    max-width: 750px;
+    margin: auto;
+
+    background-color: #f5f7fa;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #123b5d;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-container > p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.contact-group {
+    margin-bottom: 18px;
+}
+
+.contact-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.contact-group input,
+.contact-group textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+.contact-group textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.contact-group input:focus,
+.contact-group textarea:focus {
+    border-color: #d69e2e;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.checkbox-group input {
+    margin-top: 3px;
+}
+
+.submit-contact {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #123b5d;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-contact:hover {
+    background-color: #0b2b44;
+}
+
+.success-message {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background-color: #dff5e1;
+    color: #26733b;
+
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   BOOKING POPUP
+================================================== */
+
+.popup-overlay {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+}
+
+.popup-box {
+    width: 90%;
+    max-width: 500px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,.3);
+
+    animation: popupAnimation .3s ease;
+}
+
+@keyframes popupAnimation {
+
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.popup-box h2 {
+    color: #123b5d;
+    margin-bottom: 15px;
+}
+
+.popup-box p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.popup-details {
+    background-color: #f5f7fa;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.popup-details strong {
+    color: #123b5d;
+}
+
+.close-popup {
+    background-color: #d69e2e;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.close-popup:hover {
+    background-color: #b98216;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #123b5d;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .booking-form {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .package-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .why-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px) {
+
+    nav {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .package-container {
+        grid-template-columns: 1fr;
+    }
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav>
+
+    <div class="logo">
+        SARAWAK <span>TOURS</span>
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#packages">Tour Packages</a>
+        </li>
+
+        <li>
+            <a href="#booking" class="booking-btn">
+                Booking
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact">
+                Contact Us
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Explore Beautiful Sarawak
+        </h1>
+
+        <p>
+            Discover breathtaking nature, unique cultures and unforgettable adventures.
+        </p>
+
+        <a href="#packages" class="hero-btn">
+            Explore Tour Packages
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     BOOKING SEARCH
+================================================== -->
+
+<section class="booking-container" id="booking">
+
+    <h2>
+        Find Your Perfect Tour
+    </h2>
+
+    <div class="booking-form">
+
+
+        <!-- DESTINATION -->
+
+        <div class="form-group">
+
+            <label>
+                Destination
+            </label>
+
+            <select id="destination">
+
+                <option value="">
+                    Select Destination
+                </option>
+
+                <option value="Kuching">
+                    Kuching
+                </option>
+
+                <option value="Bako National Park">
+                    Bako National Park
+                </option>
+
+                <option value="Gunung Mulu">
+                    Gunung Mulu
+                </option>
+
+                <option value="Semenggoh">
+                    Semenggoh
+                </option>
+
+                <option value="Damai Beach">
+                    Damai Beach
+                </option>
+
+            </select>
+
+            <span id="destinationError" class="error-message"></span>
+
+        </div>
+
+
+        <!-- DATE -->
+
+        <div class="form-group">
+
+            <label>
+                Travel Date
+            </label>
+
+            <input
+                type="date"
+                id="travelDate"
+            >
+
+            <span id="dateError" class="error-message"></span>
+
+        </div>
+
+
+        <!-- GUESTS -->
+
+        <div class="form-group">
+
+            <label>
+                Guests
+            </label>
+
+            <input
+                type="number"
+                id="guests"
+                min="1"
+                placeholder="Number of guests"
+            >
+
+            <span id="guestsError" class="error-message"></span>
+
+        </div>
+
+
+        <!-- SEARCH BUTTON -->
+
+        <button
+            type="button"
+            class="search-btn"
+            onclick="searchTour()"
+        >
+
+            Search Tours
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
+
+<section class="about">
+
+    <h2>
+        Welcome to Sarawak Tours
+    </h2>
+
+    <p>
+        Explore the beauty of Sarawak with our carefully selected tour packages.
+        Experience amazing destinations, rich cultures, beautiful nature and exciting adventures with us.
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     TOUR PACKAGES
+================================================== -->
+
+<section class="packages" id="packages">
+
+    <div class="section-title">
+
+        <h2>
+            Popular Tour Packages
+        </h2>
+
+        <p>
+            Choose your favourite destination
+        </p>
+
+    </div>
+
+
+    <div class="package-container">
+
+
+        <!-- SEMENGGOH -->
+
+        <div class="package-card">
+
+            <img
+                src="image/semenggoh.jpg"
+                alt="Semenggoh Wildlife Center"
+            >
+
+            <div class="package-info">
+
+                <h3>
+                    Semenggoh Wildlife Center
+                </h3>
+
+                <p>
+                    Popular wildlife sanctuary in Sarawak,
+                    known for its orangutans and beautiful rainforest surroundings.
+                </p>
+
+                <div class="price">
+                    RM 150 / person
+                </div>
+
+                <a
+                    href="#booking"
+                    class="details-btn"
+                    onclick="selectTour('Semenggoh')"
+                >
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BAKO -->
+
+        <div class="package-card">
+
+            <img
+                src="image/bako.jpg"
+                alt="Bako National Park"
+            >
+
+            <div class="package-info">
+
+                <h3>
+                    Bako National Park
+                </h3>
+
+                <p>
+                    Experience beautiful rainforest,
+                    wildlife, beaches and amazing hiking trails.
+                </p>
+
+                <div class="price">
+                    RM 220 / person
+                </div>
+
+                <a
+                    href="#booking"
+                    class="details-btn"
+                    onclick="selectTour('Bako National Park')"
+                >
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MULU -->
+
+        <div class="package-card">
+
+            <img
+                src="image/mulu.jpg"
+                alt="Gunung Mulu"
+            >
+
+            <div class="package-info">
+
+                <h3>
+                    Mulu Adventure
+                </h3>
+
+                <p>
+                    Explore the amazing caves,
+                    rainforest and natural wonders of Gunung Mulu.
+                </p>
+
+                <div class="price">
+                    RM 450 / person
+                </div>
+
+                <a
+                    href="#booking"
+                    class="details-btn"
+                    onclick="selectTour('Gunung Mulu')"
+                >
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     WHY CHOOSE US
+================================================== -->
+
+<section class="why-us">
+
+    <div class="section-title">
+
+        <h2>
+            Why Choose Us?
+        </h2>
+
+        <p>
+            Make your Sarawak trip memorable
+        </p>
+
+    </div>
+
+
+    <div class="why-container">
+
+
+        <div class="why-card">
+
+            <div class="icon">
+                NATURE
+            </div>
+
+            <h3>
+                Beautiful Destinations
+            </h3>
+
+            <p>
+                Discover the best attractions around Sarawak.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">
+                MONEY
+            </div>
+
+            <h3>
+                Affordable Packages
+            </h3>
+
+            <p>
+                Enjoy exciting tours at affordable prices.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">
+                BOOK
+            </div>
+
+            <h3>
+                Easy Booking
+            </h3>
+
+            <p>
+                Book your favourite tour quickly and easily.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">
+                ⭐
+            </div>
+
+            <h3>
+                Great Experience
+            </h3>
+
+            <p>
+                Enjoy a comfortable and memorable travel experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     CONTACT US
+================================================== -->
+
+<section class="contact-section" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            Have a question? Send us a message.
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <h2>
+            Get In Touch
+        </h2>
+
+        <p>
+            Fill in the form below and our team will get back to you.
+        </p>
+
+
+        <form id="contactForm" onsubmit="submitContact(event)" novalidate>
+
+
+            <!-- NAME -->
+
+            <div class="contact-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Enter your name"
+                >
+
+                <span
+                    id="nameError"
+                    class="error-message"
+                ></span>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="example@gmail.com"
+                >
+
+                <span
+                    id="emailError"
+                    class="error-message"
+                ></span>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="contact-group">
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="Write your message here..."
+                ></textarea>
+
+                <span
+                    id="messageError"
+                    class="error-message"
+                ></span>
+
+            </div>
+
+
+            <!-- CHECKBOX -->
+
+            <div class="checkbox-group">
+
+                <input
+                    type="checkbox"
+                    id="agreeCheckbox"
+                >
+
+                <label for="agreeCheckbox">
+                    I confirm that the information provided is correct.
+                </label>
+
+            </div>
+
+            <span
+                id="checkboxError"
+                class="error-message"
+            ></span>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-contact"
+            >
+                Send Message
+            </button>
+
+
+            <div
+                id="successMessage"
+                class="success-message"
+            >
+                Your message has been sent successfully!
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     BOOKING POPUP
+================================================== -->
+
+<div
+    id="bookingPopup"
+    class="popup-overlay"
+>
+
+    <div class="popup-box">
+
+        <h2>
+            Booking Details
+        </h2>
+
+        <p>
+            Your tour selection has been received!
+        </p>
+
+
+        <div class="popup-details">
+
+            <p>
+                <strong>Destination:</strong>
+                <span id="popupDestination"></span>
+            </p>
+
+            <p>
+                <strong>Travel Date:</strong>
+                <span id="popupDate"></span>
+            </p>
+
+            <p>
+                <strong>Number of Guests:</strong>
+                <span id="popupGuests"></span>
+            </p>
+
+        </div>
+
+
+        <p>
+            Thank you for choosing QZYN TOUR AGENCY.
+            We will contact you for further booking details.
+        </p>
+
+
+        <button
+            class="close-popup"
+            onclick="closeBookingPopup()"
+        >
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <p>
+        <strong>
+            QZYN TOURS
+        </strong>
+    </p>
+
+    <p>
+        Discover. Explore. Experience Sarawak.
+    </p>
+
+    <p>
+        © 2026 QZYN TOUR AGENCY. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script>
+
+
+/* ==================================================
+   BOOKING SEARCH
+================================================== */
+
+function searchTour() {
+
+    // Get values
+
+    const destination =
+        document.getElementById("destination").value;
+
+    const travelDate =
+        document.getElementById("travelDate").value;
+
+    const guests =
+        document.getElementById("guests").value;
+
+
+    // Error elements
+
+    const destinationError =
+        document.getElementById("destinationError");
+
+    const dateError =
+        document.getElementById("dateError");
+
+    const guestsError =
+        document.getElementById("guestsError");
+
+
+    // Clear previous errors
+
+    destinationError.textContent = "";
+    dateError.textContent = "";
+    guestsError.textContent = "";
+
+
+    let valid = true;
+
+
+    // Check destination
+
+    if (destination === "") {
+
+        destinationError.textContent =
+            "Please select a destination.";
+
+        valid = false;
+
+    }
+
+
+    // Check date
+
+    if (travelDate === "") {
+
+        dateError.textContent =
+            "Please select your travel date.";
+
+        valid = false;
+
+    }
+
+
+    // Check guests
+
+    if (guests === "" || guests < 1) {
+
+        guestsError.textContent =
+            "Please enter at least 1 guest.";
+
+        valid = false;
+
+    }
+
+
+    // If invalid, stop
+
+    if (!valid) {
+
+        return;
+
+    }
+
+
+    // Put information inside popup
+
+    document.getElementById("popupDestination").textContent =
+        destination;
+
+    document.getElementById("popupDate").textContent =
+        travelDate;
+
+    document.getElementById("popupGuests").textContent =
+        guests;
+
+
+    // SHOW POPUP
+
+    document.getElementById("bookingPopup").style.display =
+        "flex";
+
+}
+
+
+/* ==================================================
+   BOOK NOW BUTTON
+================================================== */
+
+function selectTour(tourName) {
+
+    // Select destination automatically
+
+    document.getElementById("destination").value =
+        tourName;
+
+
+    // Scroll to booking section
+
+    document.getElementById("booking").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ==================================================
+   CLOSE BOOKING POPUP
+================================================== */
+
+function closeBookingPopup() {
+
+    document.getElementById("bookingPopup").style.display =
+        "none";
+
+}
+
+
+/* ==================================================
+   CLICK OUTSIDE POPUP TO CLOSE
+================================================== */
+
+document.getElementById("bookingPopup").addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+
+            closeBookingPopup();
+
+        }
+
+    }
+);
+
+
+/* ==================================================
+   CONTACT FORM VALIDATION
+================================================== */
+
+function submitContact(event) {
+
+    // Stop page refresh
+
+    event.preventDefault();
+
+
+    // Get values
+
+    const name =
+        document.getElementById("contactName").value.trim();
+
+    const email =
+        document.getElementById("contactEmail").value.trim();
+
+    const message =
+        document.getElementById("contactMessage").value.trim();
+
+    const checkbox =
+        document.getElementById("agreeCheckbox").checked;
+
+
+    // Error elements
+
+    const nameError =
+        document.getElementById("nameError");
+
+    const emailError =
+        document.getElementById("emailError");
+
+    const messageError =
+        document.getElementById("messageError");
+
+    const checkboxError =
+        document.getElementById("checkboxError");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+
+    // Clear old errors
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+    checkboxError.textContent = "";
+
+    successMessage.style.display = "none";
+
+
+    let valid = true;
+
+
+    // NAME VALIDATION
+
+    if (name === "") {
+
+        nameError.textContent =
+            "Please enter your name.";
+
+        valid = false;
+
+    }
+
+
+    // EMAIL VALIDATION
+
+    if (email === "") {
+
+        emailError.textContent =
+            "Please enter your email.";
+
+        valid = false;
+
+    }
+
+    else {
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+            emailError.textContent =
+                "Please enter a valid email address.";
+
+            valid = false;
+
+        }
+
+    }
+
+
+    // MESSAGE VALIDATION
+
+    if (message === "") {
+
+        messageError.textContent =
+            "Please enter your message.";
+
+        valid = false;
+
+    }
+
+
+    // CHECKBOX VALIDATION
+
+    if (!checkbox) {
+
+        checkboxError.textContent =
+            "Please confirm the information before submitting.";
+
+        valid = false;
+
+    }
+
+
+    // If everything is correct
+
+    if (valid) {
+
+        successMessage.style.display =
+            "block";
+
+
+        // Clear form
+
+        document.getElementById("contactForm").reset();
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+</html>
